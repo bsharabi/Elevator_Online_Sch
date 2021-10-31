@@ -50,6 +50,7 @@ public class EL_Algo implements ElevatorAlgo {
 
     @Override
     public void cmdElevator(int elev) {
+
         _elevatorSch[elev].action();
     }
 }

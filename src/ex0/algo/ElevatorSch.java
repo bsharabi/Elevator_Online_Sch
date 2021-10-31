@@ -164,7 +164,7 @@ class ElevatorSch {
                 sum += (sFlag) ? 0 : go2FloorTime;
                 return sum;
             }
-        }   if (!_queue.isEmpty()) {
+        } else  if (!_queue.isEmpty()) {
             return ((_queue.size() * go2FloorTime) + _numberOfFloors / speed);
         }
         return Integer.MAX_VALUE;
