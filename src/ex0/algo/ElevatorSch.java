@@ -15,9 +15,9 @@ class ElevatorSch {
     private final double go2FloorTime;
     private final IgoTo goTo = Elevator::goTo;
     private final Istop stop = Elevator::stop;
-    private final PriorityQueue<CallForElevator> _queue;
-    private final PriorityQueue<Integer> moveUP;
-    private final PriorityQueue<Integer> moveDOWN;
+    public final PriorityQueue<CallForElevator> _queue;
+    public final PriorityQueue<Integer> moveUP;
+    public final PriorityQueue<Integer> moveDOWN;
     private final Itime calcTime = (e, src, dest, speed) -> {
         double actionElev = e.getTimeForOpen() + e.getTimeForClose() + e.getStopTime() + e.getStartTime();
         return (e.getPos() == src) ? (Math.abs(src - dest) / speed) + actionElev :
